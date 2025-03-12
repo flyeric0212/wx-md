@@ -1,0 +1,252 @@
+/* CodeMirror6 编辑器样式 */
+.cm-editor {
+  height: 100%;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  border: 1px solid var(--border-color, #ffffff);
+  border-top: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* 移除编辑器获取焦点时的虚线边框 */
+.cm-editor:focus-within {
+  outline: none !important;
+}
+
+/* 隐藏行号 */
+.cm-editor .cm-gutters {
+  display: none !important;
+}
+
+.cm-editor .cm-content {
+  padding: var(--spacing-4);
+}
+
+.cm-editor .cm-scroller {
+  padding: 0 10px;
+  overflow-x: hidden !important;
+  overflow-y: scroll !important;
+}
+
+.cm-editor .cm-activeLine {
+
+}
+
+/* 编辑器容器 */
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* 编辑器内容区 */
+.editor-content {
+  display: flex;
+  flex: 1;
+  margin-top: var(--header-height, 60px);
+}
+
+/* 编辑器面板 */
+.editor-pane {
+  width: 50%;
+  height: 100%;
+
+}
+
+/* 预览面板 */
+.preview-pane {
+  width: 50%;
+  height: 100%;
+  overflow: auto;
+  background-color: #ffffff;
+}
+
+.preview-wrapper {
+  position: relative;
+  width: min(100%, 650px);
+  min-height: 100%;
+  padding: var(--spacing-4);
+  margin: 0 auto;
+  box-sizing: border-box;
+  outline: none;
+  word-wrap: break-word;
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-top: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* 添加移动设备预览模式 */
+.preview-wrapper.mobile-preview {
+  width: 375px;
+}
+
+/* 添加宽屏预览模式 */
+.preview-wrapper.wide-preview {
+  width: min(100%, 900px);
+}
+
+/* 编辑器头部 */
+.editor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-3) var(--spacing-4);
+  background-color: var(--bg-primary);
+  gap: var(--spacing-4);
+  border-bottom: 1px solid var(--border-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+/* 工具栏样式 */
+.editor-header .toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+
+/* 工具栏分隔线 */
+.toolbar-divider {
+  width: 1px;
+  height: 24px;
+  background-color: var(--border-color);
+  margin: 0 var(--spacing-2);
+}
+
+/* 预览模式选择器 */
+.preview-mode-selector {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  gap: 8px;
+}
+
+/* 预览模式按钮组 */
+.preview-mode-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* 预览模式按钮 */
+.preview-mode-button {
+  padding: var(--spacing-1) var(--spacing-2);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 12px;
+  background-color: #ffffff;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+}
+
+.preview-mode-button:hover {
+  background-color: var(--bg-primary);
+  border-color: var(--border-hover);
+}
+
+.preview-mode-button.active {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+/* 复制按钮 */
+.copy-button {
+  padding: var(--spacing-1) var(--spacing-2);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 12px;
+  background-color: var(--color-primary);
+  color: white;
+  transition: all 0.2s;
+}
+
+/* 下拉菜单样式 */
+.editor-header .dropdown {
+  position: relative;
+}
+
+.editor-header .dropdown-button {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-md);
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.editor-header .dropdown-button:focus {
+  outline: none;
+}
+
+.editor-header .dropdown-button:hover {
+  background-color: var(--color-gray-100);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+  font-size: calc(var(--font-size-base) * 1.05);
+}
+
+.editor-header .dropdown-button.active {
+  background-color: var(--color-gray-100);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+}
+
+.editor-header .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  min-width: 180px;
+  margin-top: var(--spacing-1);
+  padding: var(--spacing-1);
+  background-color: var(--bg-primary);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.editor-header .dropdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2);
+  color: var(--text-primary);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.editor-header .dropdown-item:hover {
+  background-color: #ffffff;
+}
+
+.editor-header .dropdown-item.checked {
+  color: var(--color-primary);
+}
+
+/* 子菜单样式 */
+.editor-header .submenu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  min-width: 180px;
+  padding: var(--spacing-1);
+  background-color: #ffffff;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}

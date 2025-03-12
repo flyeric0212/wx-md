@@ -1,0 +1,105 @@
+/* 全局变量 */
+:root {
+  /* 主题变量 */
+  --md-theme-color: #0F4C81; /* Markdown主题色 */
+
+  /* 颜色系统 */
+  --color-primary: #0F4C81;  /* 经典蓝 */
+  --color-primary-rgb: 15, 76, 129;
+  --color-success: #009874;  /* 翡翠绿 */
+  --color-warning: #FECE00;  /* 柠檬黄 */
+  --color-danger: #FA5151;   /* 活力橘 */
+  --color-info: #55C9EA;     /* 天空蓝 */
+
+  /* 中性色 */
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+
+  --bg-primary: #ffffff;
+  --bg-secondary: #ffffff;
+  --bg-editor: #ffffff;
+  --bg-preview: #ffffff;
+
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+
+  --border-color: #e5e7eb;
+  --border-hover: #d1d5db;
+  --border-focus: #0F4C81;
+
+  /* 字体系统 */
+  --font-family-base: -apple-system-font, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif;;
+
+  /* 字号系统 */
+  --font-size-base: 14px;
+
+  /* 间距系统 */
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+
+  /* 圆角 */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+
+  /* 阴影 */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  /* 布局变量 */
+  --header-height: 60px;
+}
+
+/* 通知组件样式 */
+.notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  animation: fadeInDown 0.3s ease-out forwards;
+  max-width: 80%;
+  text-align: center;
+}
+
+.notification.success {
+  background-color: #f0f9eb;
+  color: #67c23a;
+  border: 1px solid #c2e7b0;
+}
+
+.notification.error {
+  background-color: #fef0f0;
+  color: #f56c6c;
+  border: 1px solid #fbc4c4;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <!-- 背景圆形 -->
+  <circle cx="32" cy="32" r="30" fill="#07C160" />
+
+  <!-- 微信图标元素 -->
+  <path d="M44 24c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 3.314 1.343 6.314 3.515 8.485L20 36l3.515-3.515C25.686 34.657 28.686 36 32 36c6.627 0 12-5.373 12-12z" fill="white" />
+
+  <!-- Markdown 'M' 字母 -->
+  <path d="M24 40v10h4v-6l4 6h4l4-6v6h4V40h-4l-6 8-6-8h-4z" fill="white" />
+
+  <!-- 编辑器线条 -->
+  <path d="M18 28h28M18 32h28" stroke="white" stroke-width="2" stroke-linecap="round" />
+</svg>

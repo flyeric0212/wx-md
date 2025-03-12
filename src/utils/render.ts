@@ -333,6 +333,7 @@ export const createMarkdownRenderer = (
       // 返回带引用索引的文本，数字使用上标显示
       return createElement({
         styleKey: 'a',
+        tagName: 'span',
         content: `${text}<sup>[${footnoteIndex}]</sup>`,
         attributes: {
           'data-index': String(footnoteIndex)

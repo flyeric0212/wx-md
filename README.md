@@ -196,7 +196,7 @@ npm run preview
 
 如有任何问题或建议，请通过以下方式联系我们：
 
-- 提交 [Issue](https://github.com/flyeric0212/md/issues)
+- 提交 [Issue](https://github.com/flyeric0212/wx-md/issues)
 - 发送邮件至 [bo.liang0212@outlook.com](mailto:bo.liang0212@outlook.com)
 
 ## 致谢

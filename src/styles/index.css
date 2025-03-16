@@ -37,7 +37,7 @@
   --border-focus: #0F4C81;
 
   /* 字体系统 */
-  --font-family-base: -apple-system-font, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif;;
+  --font-family-base: mp-quote, PingFang SC, system-ui, -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif;
 
   /* 字号系统 */
   --font-size-base: 14px;

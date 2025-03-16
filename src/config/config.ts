@@ -5,7 +5,7 @@ import { IConfigOption, PreviewMode } from '../types';
 export const DEFAULT_THEME: ThemeType = 'simple';
 export const DEFAULT_THEME_COLOR = '#0F4C81'; // 经典蓝作为默认值
 export const DEFAULT_CODE_THEME = 'default';
-export const DEFAULT_FONT_FAMILY = '-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif';
+export const DEFAULT_FONT_FAMILY = 'mp-quote, PingFang SC, system-ui, -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif';
 export const DEFAULT_FONT_SIZE = '16px';
 
 // 预览模式类型和默认值
@@ -22,7 +22,7 @@ export const themeOptions: IConfigOption<ThemeType>[] = [
 export const fontFamilyOptions: IConfigOption[] = [
   {
     label: '无衬线',
-    value: '-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif',
+    value: 'mp-quote, PingFang SC, system-ui, -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif',
     desc: '无衬线字体，现代简洁'
   },
   {

@@ -80,20 +80,39 @@ const buildStyleString = (
 
   // 获取元素样式
   const elementStyle = themeStyles.elements[styleKey as keyof ThemeStyles['elements']];
-  let styleStr = baseStyles;
 
-  // 处理样式对象
+  // 解析基础样式，转换为对象
+  const stylesObj: Record<string, string> = {};
+  if (baseStyles) {
+    // 分割样式字符串为单独的属性
+    const styleProps = baseStyles.split(';').filter(prop => prop.trim());
+    for (const prop of styleProps) {
+      const [key, value] = prop.split(':').map(part => part.trim());
+      if (key && value) {
+        stylesObj[key] = value;
+      }
+    }
+  }
+
+  // 处理元素特定样式，并覆盖基础样式中的相同属性
   if (elementStyle) {
     for (const [key, value] of Object.entries(elementStyle)) {
       if (value !== undefined && value !== null) {
         // 转换驼峰命名为连字符命名
         const cssKey = key.replace(/([A-Z])/g, '-$1').toLowerCase();
-        styleStr += `${cssKey}: ${String(value)}; `;
+        // 更新或添加到样式对象
+        stylesObj[cssKey] = String(value);
       }
     }
   }
 
-  return styleStr;
+  // 将样式对象转换回字符串
+  let finalStyleStr = '';
+  for (const [key, value] of Object.entries(stylesObj)) {
+    finalStyleStr += `${key}: ${value}; `;
+  }
+
+  return finalStyleStr;
 };
 
 /**

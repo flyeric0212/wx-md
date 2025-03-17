@@ -75,11 +75,6 @@ const defaultTheme: ThemeStyles = {
       color: 'rgb(0, 0, 0)',
       textAlign: 'left'
     },
-    code: {
-      margin: 0,
-      fontFamily: 'Menlo, Operator Mono, Consolas, Monaco, monospace',
-      fontSize: '14px',
-    },
     code_span: {
       color: '#d14',
       backgroundColor: 'rgba(27,31,35,.05)',
@@ -87,6 +82,7 @@ const defaultTheme: ThemeStyles = {
       padding: '0.2em 0.4em',
       fontSize: '0.9em',
       whiteSpace: 'normal',
+      fontFamily: 'Menlo, Operator Mono, Consolas, Monaco, monospace',
     },
     pre_code: {
       overflowX: 'auto',
@@ -94,6 +90,11 @@ const defaultTheme: ThemeStyles = {
       margin: '10px 4px',
       borderRadius: '8px',
       lineHeight: `1.5`,
+    },
+    code: {
+      margin: 0,
+      fontFamily: 'Menlo, Operator Mono, Consolas, Monaco, monospace',
+      fontSize: '14px',
     },
     img: {
       maxWidth: '100%',

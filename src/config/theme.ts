@@ -58,7 +58,7 @@ const defaultTheme: ThemeStyles = {
       marginRight: '4px',
       marginBottom: '1.5em',
       marginLeft: '4px',
-      letterSpacing: '0.1em',
+      letterSpacing: '0.034em',
       textAlign: 'justify',
     },
     blockquote: {

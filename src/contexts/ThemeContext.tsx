@@ -100,13 +100,16 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
           }
 
           // 2. 处理em单位 - 转换为px单位，这样在微信中显示就会正确
-          if (value.includes('em') && (key === 'fontSize' || key.toLowerCase().includes('size'))) {
-            const emMatch = value.match(/([0-9.]+)em/);
+          if (value.includes('em')) {
+            const emMatch = value.match(/([0-9.]+)em/g);
             if (emMatch) {
-              const emValue = parseFloat(emMatch[1]);
-              // 计算px值并保留一位小数
-              const pxValue = (emValue * parseInt(fontSize.replace('px', ''), 10)).toFixed(1);
-              obj[key] = value.replace(/([0-9.]+)em/, `${pxValue}px`);
+              let updatedValue = value;
+              emMatch.forEach(match => {
+                const emValue = parseFloat(match);
+                const pxValue = emValue * parseInt(fontSize.replace('px', ''), 10);
+                updatedValue = updatedValue.replace(match, `${pxValue}px`);
+              });
+              obj[key] = updatedValue;
             }
           }
         } else if (typeof value === 'object' && value !== null) {

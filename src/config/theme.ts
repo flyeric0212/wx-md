@@ -4,7 +4,7 @@ import { ThemeStyles } from '@/types';
 // 创建默认主题
 const defaultTheme: ThemeStyles = {
   base: {
-    lineHeight: '1.6',
+    lineHeight: '1.75',
   },
   elements: {
     h1: {
@@ -128,25 +128,27 @@ const defaultTheme: ThemeStyles = {
       width: '100%',
       borderCollapse: 'collapse',
       textAlign: `center`,
-      margin: `1em 0`, // 设置左右为 0px，防止右侧被截断
-      tableLayout: "fixed",
-      wordWrap: "break-word",
-      wordBreak: "break-word"
+      fontSize: '14px',
+      // margin: `1em 0`, // 设置左右为 0px，防止右侧被截断
+      // tableLayout: "fixed",
+      // wordWrap: "break-word",
+      // wordBreak: "break-word"
     },
     th: {
-      background: '#f2f2f2',
-      border: '1px solid #dfdfdf',
-      fontWeight: 'bold',
+      // background: '#f2f2f2',
+      border: '1px solid rgba(148, 139, 139, 0.49)',
+      fontSize: '14px',
     },
     td: {
+      border: '1px solid rgba(148, 139, 139, 0.49)',
+      fontSize: '14px',
       padding: '0.25em 0.5em',
-      border: '1px solid #dfdfdf',
-      color: `#3f3f3f`,
+      // color: `#3f3f3f`,
       // wordBreak: `keep-all`,
-      wordBreak: `break-word`,  // 改为break-word更友好
-      overflowWrap: `break-word`, // 添加这个属性
-      maxWidth: '100%',         // 确保不超出容器
-      whiteSpace: 'normal'      // 允许自动换行
+      // wordBreak: `break-word`,  // 改为break-word更友好
+      // overflowWrap: `break-word`, // 添加这个属性
+      // maxWidth: '100%',         // 确保不超出容器
+      // whiteSpace: 'normal'      // 允许自动换行
     },
     a: {
       color: '#576b95',

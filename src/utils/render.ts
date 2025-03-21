@@ -353,7 +353,7 @@ export const createMarkdownRenderer = (
       return createElement({
         styleKey: 'a',
         tagName: 'span',
-        content: `${text}<sup>[${footnoteIndex}]</sup>`,
+        content: `${text} <sup>[${footnoteIndex}]</sup>`,
         attributes: {
           'data-index': String(footnoteIndex)
         }

@@ -1,8 +1,8 @@
 services:
   wx-md:
     # build: ..
-    image: klause/wx-md:latest
-    container_name: wx-md-frontend
+    image: your-repo/wx-md:latest
+    container_name: wx-md
     ports:
       - "9088:80"
     # volumes:

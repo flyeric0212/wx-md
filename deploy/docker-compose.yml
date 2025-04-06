@@ -1,7 +1,7 @@
 services:
   wx-md:
     # build: ..
-    image: your-repo/wx-md:latest
+    image: klause/wx-md:latest
     container_name: wx-md
     ports:
       - "9088:80"

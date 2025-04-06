@@ -1,6 +1,18 @@
-#FROM nginx:latest
-FROM registry.cn-chengdu.aliyuncs.com/flyeric/nginx:latest
+# 构建阶段
+FROM node:18 AS builder
 
-COPY dist /usr/share/nginx/html
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+RUN npm run build
+
+# 生产阶段
+FROM nginx:latest
+
+COPY --from=builder /app/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-CMD /bin/bash -c "exec nginx -g 'daemon off;'"
+
+CMD ["nginx", "-g", "daemon off;"]

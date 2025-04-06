@@ -1,0 +1,10 @@
+services:
+  wx-md:
+    # build: ..
+    image: klause/wx-md:latest
+    container_name: wx-md-frontend
+    ports:
+      - "9088:80"
+    # volumes:
+    #   - ../nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    restart: always

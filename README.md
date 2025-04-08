@@ -116,6 +116,53 @@ npm run build
 npm run preview
 ```
 
+## Docker 镜像构建与部署
+
+### 2. 构建 Docker 镜像
+
+#### 本地构建（当前架构）
+
+```bash
+docker build -t your-repo/wx-md:latest .
+```
+
+#### 跨平台构建并推送到远程仓库
+
+请先确保已登录目标镜像仓库，并将 `your-repo/wx-md:latest` 替换为你的仓库地址。
+
+**常用平台组合：**
+
+- 生产环境推荐：`linux/amd64,linux/arm64`
+- 更广泛兼容（含树莓派、老设备）：`linux/amd64,linux/arm64,linux/arm/v7`
+
+**示例命令：**
+
+```bash
+docker buildx build --platform linux/amd64,linux/arm64 -t your-repo/wx-md:latest --push .
+```
+
+或
+
+```bash
+docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t your-repo/wx-md:latest --push .
+```
+
+### 3. 使用 docker-compose 部署
+
+```bash
+cd deploy
+docker-compose build
+docker-compose up -d
+```
+
+### 4. 访问服务
+
+浏览器访问：
+
+```
+http://localhost
+```
+
 ## 使用指南
 
 ### 基本使用

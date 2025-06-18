@@ -138,7 +138,7 @@ public class Main {
 
 添加感叹号（`!`），然后紧跟着是方括号，方括号中可添加备用文本（alt text，即图片显示失败后显示此文本），最后跟着圆括号，圆括号中添加图片资源的路径或 URL。如 `![描述文本](图片链接)`。
 
-![Eric技术圈公众号](https://pic-bed-1256249917.cos.ap-chengdu.myqcloud.com/uPic/qrcode_for_gh_996c5c8013f2_430.jpg)
+![Eric技术圈公众号](https://eric-tech-hub-1256249917.cos.ap-chengdu.myqcloud.com/qrcode_for_gh_996c5c8013f2_430.jpg)
 
 ### 10. 表格
 
